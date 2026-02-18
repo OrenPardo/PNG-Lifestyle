@@ -68,13 +68,18 @@
 <img alt="Paul & Greg" src="/logo.png" class="h-[10rem]" />
 </div>
 <div class="hidden md:flex items-center gap-6 text-sm text-gray-600 dark:text-gray-300 font-medium">
-<a class="hover:text-primary dark:hover:text-white transition" href="#">הסיפור שלנו</a>
-<a class="hover:text-primary dark:hover:text-white transition" href="#">LOOK & FEEL</a>
-<a class="hover:text-primary dark:hover:text-white transition" href="#">אירועי חו"ל</a>
-<a class="hover:text-primary dark:hover:text-white transition" href="#">שירותי בר אקסקלוסיביים</a>
-<a class="hover:text-primary dark:hover:text-white transition" href="#">בר קוקטיילים</a>
-<a class="hover:text-primary dark:hover:text-white transition" href="#">סדנת קוקטיילים</a>
-<a class="hover:text-primary dark:hover:text-white transition" href="#">אירועי בר קפה</a>
+    <a class="hover:text-primary dark:hover:text-white transition" href="#story">הסיפור שלנו</a>
+    <div class="relative group">
+        <button class="flex items-center gap-1 hover:text-primary dark:hover:text-white transition py-2 focus:outline-none">
+            שירותי הבר שלנו
+            <span class="material-icons text-xs transition-transform group-hover:rotate-180">expand_more</span>
+        </button>
+        <div class="absolute top-full right-0 w-56 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-[70] border border-gray-100 dark:border-gray-700">
+            <a href="#" class="block px-4 py-2.5 text-sm hover:bg-brand-bg dark:hover:bg-gray-700 hover:text-primary transition-colors">בר קוקטלים לאירועים</a>
+            <a href="#" class="block px-4 py-2.5 text-sm hover:bg-brand-bg dark:hover:bg-gray-700 hover:text-primary transition-colors">בר קוקטלים לחתונות</a>
+            <a href="#" class="block px-4 py-2.5 text-sm hover:bg-brand-bg dark:hover:bg-gray-700 hover:text-primary transition-colors">בר קוקטלים לאירועי חברה</a>
+        </div>
+    </div>
 </div>
 <div class="flex items-center gap-3">
 <button class="border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 px-3 py-1.5 text-xs font-medium rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition flex items-center gap-1.5">
@@ -99,7 +104,7 @@ EN
 </div>
 <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white/50 to-transparent dark:from-background-dark opacity-50"></div>
 </header>
-<section class="py-20 md:py-32 container mx-auto px-6 relative overflow-hidden">
+<section id="story" class="py-20 md:py-32 container mx-auto px-6 relative overflow-hidden">
 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
 <div class="w-full md:w-1/2 relative h-[500px]">
 <div class="absolute top-0 left-0 w-3/4 h-64 overflow-hidden shadow-xl z-10">
