@@ -2,9 +2,19 @@ const express = require('express');
 const compression = require('compression');
 const helmet = require('helmet');
 const path = require('path');
+const fs = require('fs');
+const crypto = require('crypto');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Generate CSS cache-busting hash from file content at startup
+const cssPath = path.join(__dirname, 'public', 'tailwind.css');
+const cssHash = crypto.createHash('md5').update(fs.readFileSync(cssPath)).digest('hex').slice(0, 8);
+
+// Pre-render index.html with the CSS hash baked in
+const rawHtml = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
+const indexHtml = rawHtml.replace(/__CSS_HASH__/g, cssHash);
 
 // Security headers
 app.use(helmet({
@@ -27,13 +37,20 @@ app.use(compression());
 app.use((req, res, next) => {
   if (req.path === '/' || req.path.endsWith('.html')) {
     res.setHeader('Link', [
-      '</tailwind.css?v=5>; rel=preload; as=style',
+      `</tailwind.css?v=${cssHash}>; rel=preload; as=style`,
       '</logo.webp>; rel=preload; as=image; type=image/webp',
       '<https://fonts.googleapis.com>; rel=preconnect',
       '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
     ].join(', '));
   }
   next();
+});
+
+// Serve index.html with CSS hash injected
+app.get('/', (req, res) => {
+  res.setHeader('Content-Type', 'text/html; charset=utf-8');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.send(indexHtml);
 });
 
 // Static files with production-grade cache headers
@@ -55,5 +72,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Serving on port ${PORT}`);
+  console.log(`Serving on port ${PORT} (CSS hash: ${cssHash})`);
 });

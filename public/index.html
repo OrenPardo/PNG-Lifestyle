@@ -56,7 +56,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin />
 <link rel="preload" href="/logo.webp" as="image" type="image/webp" fetchpriority="high" />
-<link rel="stylesheet" href="/tailwind.css?v=5" />
+<link rel="stylesheet" href="/tailwind.css?v=__CSS_HASH__" />
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
 <style>html{background:#5A6337}
@@ -143,8 +143,8 @@ EN
 <h2 class="text-3xl md:text-4xl font-sans font-bold text-primary dark:text-white">שירותי הבר שלנו</h2>
 </div>
 <div class="container mx-auto px-6">
-<div id="services-accordion" class="flex flex-col md:flex-row md:aspect-video gap-1">
-<div class="service-card relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[1]" data-index="0">
+<div id="services-accordion" class="flex flex-col md:flex-row md:h-[700px] md:justify-center gap-1">
+<div class="service-card relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out" data-index="0" style="flex:0 0 150px">
 <img alt="Coffee machine" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlaPV74F7MU2yUH4ePEw6VzAcmEZ07qiyFcXGPj59P8ZB9cGTo_Ji9mdEIEOiU0_vUrVvSFP2FKdABqhFZ9qkGaYfmyHNfDzyLQ04XQTuUuhmhC6enUmGMSPj22kOkT3kGgog57YLnbsxsvZLCWFxb0Wh07Fn50GpSSwk1OBv1EOy3eX-4elPUekR3YRUPJjYnaM3kniQXQDClX352GiuHQj7XthJD1IgZT3SSFLFCUaHmwGFbOnhy-txpbKYK9jH4Y-fiDAWnxJGR" loading="lazy" decoding="async" />
 <div class="absolute top-8 left-1/2 -translate-x-1/2 w-11/12 text-center z-20">
 <button class="w-full bg-primary/80 backdrop-blur-sm text-white px-6 py-3 text-sm border border-white/20 hover:bg-primary transition-colors">
@@ -157,7 +157,7 @@ EN
 </div>
 </div>
 </div>
-<div class="service-card active relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[4]" data-index="1">
+<div class="service-card active relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out" data-index="1" style="flex:0 0 700px">
 <img alt="Bartender pouring" class="w-full h-full object-cover transition-transform duration-700 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK0Ft1ssgGjaf7wgjDCoM_V29gUBhLezv2SkOn3S-7pdpypPkfAGPaEoMKYQaIu3t3zTB-awBO7NIYJsT2pxZm82IdwDukPYqSlYp4p5DdawNhXeDyur892tT7156Y-WpXQy1jbhci5lN2XEGcNqm5IT8e9GlkpotQrmx1yppHCDaOHKnhjbVPLngfnJeZK_cRPtCnoJTa9upJREaEgJSFYYPWzU7EONolsixFUmePULlTJ8V_zM2TwRVrdqcBtZj4qiM-x_hWy_ov" loading="lazy" decoding="async" />
 <div class="absolute top-8 left-1/2 -translate-x-1/2 w-11/12 text-center z-20">
 <button class="w-full bg-primary/80 backdrop-blur-sm text-white px-6 py-3 text-sm border border-white/20 hover:bg-primary transition-colors">
@@ -170,7 +170,7 @@ EN
 </div>
 </div>
 </div>
-<div class="service-card relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out md:flex-[1]" data-index="2">
+<div class="service-card relative overflow-hidden aspect-video md:aspect-auto md:h-full cursor-pointer transition-all duration-700 ease-in-out" data-index="2" style="flex:0 0 150px">
 <img alt="Elegant bar setup" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWVqDyZ-WBI5ufZwP6ncnLhXmLHpKcc4KcG23y2Wg-07y117-B53wVxES7dKFb4cH-ys0YqZsLfi9JcL6fFMqKn9SDzA8yZ84cwU8d2eq7UyB2Wlag2WlCwT6iOv7alLwsn3I7TDVNq3zLALzgxD8XwBSdLRzezejiBQCk7t9JGxGi8uK2ng8q2ihx85X-xi-WqMAD4h8zYrzMlIMv2FOem-osDrrUfYwZ1ZROP-10KAGFUv2sYbMi6Ja-Tr8EDMnjLtWUFucgKWyP" loading="lazy" decoding="async" />
 <div class="absolute top-8 left-1/2 -translate-x-1/2 w-11/12 text-center z-20">
 <button class="w-full bg-primary/80 backdrop-blur-sm text-white px-6 py-3 text-sm border border-white/20 hover:bg-primary transition-colors">
@@ -321,12 +321,12 @@ const cardData = Array.from(accordion.querySelectorAll('.service-card')).map(car
 function setActiveCard(activeIndex) {
   cardData.forEach(({ card, overlay, img }, i) => {
     if (i === activeIndex) {
-      card.style.flex = '4';
+      card.style.flex = '0 0 700px';
       card.classList.add('active');
       overlay.style.opacity = '1';
       img.style.transform = 'scale(1.05)';
     } else {
-      card.style.flex = '1';
+      card.style.flex = '0 0 150px';
       card.classList.remove('active');
       overlay.style.opacity = '0';
       img.style.transform = 'scale(1)';
