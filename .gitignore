@@ -1,6 +1,12 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Python (legacy)
 __pycache__/
 *.pyc
-.env
 
 # Local IDE/editor configuration (personal settings)
 .claude/

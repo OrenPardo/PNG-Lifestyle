@@ -1,0 +1,23 @@
+{
+  "name": "png-lifestyle",
+  "version": "1.0.0",
+  "description": "Paul & Greg - World Wide Bar & Cocktails Services",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npx tailwindcss -i ./input.css -o ./public/tailwind.css --minify",
+    "build:css": "npx tailwindcss -i ./input.css -o ./public/tailwind.css",
+    "watch:css": "npx tailwindcss -i ./input.css -o ./public/tailwind.css --watch"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
