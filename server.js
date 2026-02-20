@@ -27,7 +27,7 @@ app.use(compression());
 app.use((req, res, next) => {
   if (req.path === '/' || req.path.endsWith('.html')) {
     res.setHeader('Link', [
-      '</tailwind.css?v=4>; rel=preload; as=style',
+      '</tailwind.css?v=5>; rel=preload; as=style',
       '</logo.webp>; rel=preload; as=image; type=image/webp',
       '<https://fonts.googleapis.com>; rel=preconnect',
       '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
